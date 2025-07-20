@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jazi Wine | Just Natural Wine</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="images/favicon1.png" type="image/jpg" />
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+<header class="main-header">
+  <div class="header-container">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="images/favicon1.png" alt="JaziWine logo" />
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+      <input type="text" placeholder="Search wines..." />
+      <button><img src="images/search-icon.svg" alt="Search" /></button>
+    </div>
+
+    <!-- Icons -->
+    <div class="header-icons">
+      <div class="lang-switch">
+        <select>
+          <option value="en">EN</option>
+          <option value="fr">FR</option>
+        </select>
+      </div>
+      <div class="cart-icon">
+        <img src="images/cart-icon.svg" alt="Cart" />
+      </div>
+    </div>
+  </div>
+  <div class="nav-buttons">
+  <a href="catalog.html">WINE CATALOG</a>
+  <a href="about.html">ABOUT US</a>
+  <a href="new-arrivals.html">NEW ARRIVALS</a>
+  <a href="gifts.html">GIFT BASKETS</a>
+</div>
+</header>
+<main>
+  <section class="hero" data-aos="fade-up">
+    <h2>The Grape Escape:</h2>
+    <p>Your Online Destination For Wine</p>
+    <h3>Natural wine (French: vin naturel, vin nature; German: Naturwein) refers to a generalized movement among winemakers for production of wine using simple or traditional methods. Although there is no uniform definition of natural wine, it is usually produced without the use of pesticides or herbicides, with few or no additives, and limited filtration and fining. Other terms for the product include minimal-intervention, low-intervention wine, raw wine, and naked wine.</h3>
+    <a href="#shop" class="btn">SHOP NOW</a>
+    <img src="images/winebottle.svg" alt="Wine Bottle" class="hero-bottle" data-aos="fade-left" data-aos-delay="300" data-aos-easing="ease-out"/>
+  </section>
+  <section id="shop" class="product-list" data-aos="fade-up">
+  <h2>Featured Wines</h2>
+  <div class="products">
+    <div class="product-card" data-aos="zoom-in">
+      <img src="https://www.xtrawine.com/cdn/shop/files/villa-calicantus_3922_1.webp?v=1728007893" alt="Biodynamic" />
+      <h3>Chiar'Otto 2023 by Villa Calicantus</h3>
+      <p>Made from classic Sangiovese, blended with a touch of Canaiolo and Colorino for added depth and softness.</p>
+      <button class="btn">Buy Now</button>
+    </div>
+    <div class="product-card" data-aos="zoom-in" data-aos-delay="100">
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="White Wine Bottle" />
+      <h3>Golden Glow</h3>
+      <p>Crisp and refreshing natural white wine.</p>
+      <button class="btn">Buy Now</button>
+    </div>
+    <div class="product-card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="https://images.unsplash.com/photo-1546549039-9ef535d50c06?auto=format&fit=crop&w=400&q=80" alt="Rosé Wine Bottle" />
+      <h3>Blush Rosé</h3>
+      <p>Delightfully floral natural rosé.</p>
+      <button class="btn">Buy Now</button>
+    </div>
+  </div>
+</section>
+</main>
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // animation duration in ms
+    once: true,    // whether animation should happen only once - while scrolling down
+  });
+</script>
+</div>
+<script>
+  window.addEventListener("load", () => {
+    document.querySelector(".hero-bottle").classList.add("slide-in");
+  });
+</script>
+</body>
+</html>

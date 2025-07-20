@@ -1,18 +1,81 @@
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  background: #d7bc9e;
-  color: #333;
+  background-color: rgb(229, 229, 229);
 }
 
-header {
-  background: linear-gradient(90deg, #144c0e8a, #2a741588, #3f811088);
+/* Header Container */
+.main-header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 20px 40px;
+  z-index: 1000;
+  background: transparent;
+}
+
+.header-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo img {
+  height: 90px;
+  padding-left: 300px;
+}
+
+/* Search Bar */
+.search-bar {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  color: white
+}
+
+.search-bar input {
+  width: 60%;
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: none;
+  font-size: 1rem;
+}
+
+.search-bar button {
+  background-color: orange;
+  border: none;
+  padding: 8px;
+  border-radius: 0%;
+  cursor: pointer;
+}
+
+.search-bar button img {
+  height: 16px;
+  width: 16px;
+}
+
+/* Right-side icons */
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.lang-switch select {
+  background: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.cart-icon img {
+  height: 24px;
+  cursor: pointer;
 }
 
 .logo {
@@ -36,60 +99,111 @@ nav a:hover {
   cursor: pointer;
 }
 .hero {
-  height: 90vh;
-  background-image: url('https://wallpapercat.com/w/full/d/f/e/1313591-3840x2160-desktop-4k-wineglass-background.jpg');
-  background-size: cover;
-  background-position: center;
+  background-image: url("images/page1.svg");
+  background-repeat: no-repeat;
+  background-size: contain;     /* no cropping */
+  background-position: center;  /* center it */
+  background-color: rgb(229, 229, 229); /* fallback color */
+
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
-  text-align: center;
+
   position: relative;
   color: white;
   padding: 0 20px;
+  padding-left: 270px;
+  padding-right: 20px;
+
+  height: 100vh;      /* full screen */
+  margin-top: 70px;  /* move hero down below header */
+  overflow: visible;
 }
+
 
 .hero-text {
   position: relative;
-  z-index: 2;
   font-size: 2.8rem;
-  font-weight: 700;
+  font-weight: 300;
   line-height: 1.2;
   max-width: 800px;
+  text-align: left; /* force left alignment for all children */
+  margin: 0 auto;   /* center container horizontally if needed */
+
 }
 
+
+
 .hero h2 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  font-weight: 700;
+  font-size: 5rem;
+  font-weight: 200;
   letter-spacing: 1.2px;
+  text-align: left; /* just to be explicit */
+  margin-bottom: 0em;
+  margin-top: 0;
 }
 
 .hero p {
-  font-size: 1.25rem;
-  margin-bottom: 35px;
-  font-weight: 500;
+  font-size: 2.6rem;
+  font-weight: 200;
+  text-align: left; /* align paragraph left too */
+  margin-bottom: 0.5em; /* smaller gap below the heading */
+  margin-top: 0;
+}
+.hero h3 {
+  font-size: 0.8rem;
+  font-weight: 200;
+  color: white;
+  margin-right: 700px;
+  padding-right: 50px;
+ margin-top: 1em;  /* smaller space above */
+  margin-bottom: 0.5em;
 }
 
+
 .btn {
-  background: #364f2f;
+  background: #FEA55C;
   color: white;
+  height: 5px;
+  width: 100px;
   padding: 15px 35px;
-  border-radius: 1px;
-  font-size: 1.2rem;
-  font-weight: 600;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: 200;
   text-decoration: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   user-select: none;
+  display: flex;               /* use flexbox */
+  align-items: center;         /* vertical center */
+  justify-content: center;     /* horizontal center */
+  text-align: center;          /* fallback for text */
+  padding: 10px 20px;          /* adjust padding as needed */
+  cursor: pointer;
+  border: none;
+  margin-top: 10px;
 }
 
 .btn:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
+
+.hero-bottle {
+  position: absolute;
+  right: -500px; /* Start offscreen to the right */
+  height: 73vh;
+  z-index: 1;
+  transition: right 1.5s ease-out;
+}
+
+.hero-bottle.slide-in {
+  right: 170px; /* Final position inside the hero */
+}
 .product-list {
   max-width: 1200px;
   margin: 60px auto;
+  margin-top: 150px;
   padding: 0 20px;
   text-align: center;
 }

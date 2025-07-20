@@ -2,27 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Jazi Wine</title>
+  <title>Jazi Wine | Just Natural Wine</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css">
-  <!-- AOS CSS -->
+  <link rel="shortcut icon" href="images/favicon1.png" type="image/jpg" />
 <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
-<header>
-  <div class="logo">Jazi Wine</div>
-  <nav>
-  <a href="index.html" class="active">Home</a>
-  <a href="about.html">About</a>
-  <a href="shop.html">Shop</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="contact.html">Contact</a>
-  </nav>
+<header class="main-header">
+  <div class="header-container">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="images/favicon1.png" alt="JaziWine logo" />
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+      <input type="text" placeholder="Search wines..." />
+      <button><img src="images/search-icon.svg" alt="Search" /></button>
+    </div>
+
+    <!-- Icons -->
+    <div class="header-icons">
+      <div class="lang-switch">
+        <select>
+          <option value="en">EN</option>
+          <option value="fr">FR</option>
+        </select>
+      </div>
+      <div class="cart-icon">
+        <img src="images/cart-icon.svg" alt="Cart" />
+      </div>
+    </div>
+  </div>
 </header>
 <main>
   <section class="hero" data-aos="fade-up">
-    <h2>Natural, bold, and beautifully bottled</h2>
-    <p>Discover artisan wines that celebrate nature and craft.</p>
-    <a href="#shop" class="btn">Shop now</a>
+    <h2>The Grape Escape:</h2>
+    <p>Your Online Destination For Wine</p>
+    <h3>Natural wine (French: vin naturel, vin nature; German: Naturwein) refers to a generalized movement among winemakers for production of wine using simple or traditional methods. Although there is no uniform definition of natural wine, it is usually produced without the use of pesticides or herbicides, with few or no additives, and limited filtration and fining. Other terms for the product include minimal-intervention, low-intervention wine, raw wine, and naked wine.</h3>
+    <a href="#shop" class="btn">SHOP NOW</a>
+    <img src="images/winebottle.svg" alt="Wine Bottle" class="hero-bottle" data-aos="fade-left" data-aos-delay="300" data-aos-easing="ease-out"/>
   </section>
   <section id="shop" class="product-list" data-aos="fade-up">
   <h2>Featured Wines</h2>
@@ -57,5 +77,10 @@
   });
 </script>
 </div>
+<script>
+  window.addEventListener("load", () => {
+    document.querySelector(".hero-bottle").classList.add("slide-in");
+  });
+</script>
 </body>
 </html>
